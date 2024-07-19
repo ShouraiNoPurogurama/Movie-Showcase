@@ -1,0 +1,112 @@
+//scss
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Diphylleia&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Rubik Lines");
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto";
+    vertical-align: top
+}
+
+.header {
+    position: sticky;
+    padding: 7px 30px;
+    background-color: #111111;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
+    .logo {
+        text-decoration: none;
+        font-size: 30px;
+        font-weight: 500;
+        color: rgb(229,9,20) !important;
+    }
+}
+
+.movie {
+    position: relative;
+    img {
+        width: 100%;
+        height: 93.7vh;
+        object-fit: cover;
+    }
+
+    &__info {
+        position: absolute;
+        bottom: 100px;
+        left: 50px;
+        width: 500px;
+    }
+
+    h2 {
+        font-family: "Rubik Lines";
+        text-align: center;
+        width: 500px;
+        font-size: 50px;
+        color: #ffffff;
+    }
+
+    p {
+        font-size: 20px;
+        margin: 20px 0;
+        color: #ffffff;
+        letter-spacing: 1px;
+        font-weight: 600;
+        font-family: "Diphylleia";
+
+    }
+
+    button {
+        position: absolute;
+        z-index: 100;
+        color: white;
+        background-color: rgba($color: #232323, $alpha: 0.5);
+        padding: 7px 30px;
+        font-size: 14px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: rgba($color: #e3e3e3, $alpha: 1);                    
+        color: black;
+        transform: scale(1.1);
+        transition: all 0.3s;
+    }
+
+    #modal {
+        display: none;
+        background-color: #222;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+
+        .hide-trailer {
+            position: absolute;
+            opacity: 0.1;
+            top: 58px;
+            right: 7px;
+            z-index: 200;
+            padding: 6px 8px 3px 8px;
+            border-radius: 50%;
+            border-style: none;
+            cursor: pointer;
+            }
+
+        .hide-trailer:hover {
+            transition: all 0.3s;
+            opacity: 1;
+        }
+    }
+}
